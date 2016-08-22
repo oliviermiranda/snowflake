@@ -3,7 +3,12 @@
 - include: "*.view.lookml"       # include all the views
 - include: "*.dashboard.lookml"  # include all the dashboards
 
-
+- explore: tickets
+  joins: 
+      - join: ticket_comments
+        foreign_key: id
+      
+      
 - view: fitbit_active_tickets
   derived_table:
     sql: |
